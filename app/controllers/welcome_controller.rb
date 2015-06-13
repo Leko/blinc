@@ -7,4 +7,7 @@ class WelcomeController < BaseController
 
   def privacy
   end
+
+  def help
+  end
 end
