@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+  get 'welcome/term'
+  get 'welcome/privacy'
+
   root 'home#index'
   get 'home/index'
 
