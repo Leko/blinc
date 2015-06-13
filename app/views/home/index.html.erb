@@ -1,6 +1,6 @@
 
 <% if current_user %>
-  <%= current_user.name %> <%= link_to 'ログアウト', logout_path %>
+  <%= current_user.name %> <%= link_to t('auth.logout'), logout_path %>
 <% else %>
-  <%= link_to 'ログイン', '/auth/moves' %>
+  <%= link_to t('auth.login'), '/auth/moves' %>
 <% end %>
