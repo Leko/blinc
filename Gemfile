@@ -33,6 +33,9 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'font-awesome-sass'
+
 gem 'dotenv-rails'
 gem 'omniauth-moves'
 gem 'moves'

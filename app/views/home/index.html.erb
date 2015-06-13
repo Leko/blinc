@@ -1,6 +1,6 @@
 
 <% if current_user %>
-  <%= current_user.name %> <%= link_to t('auth.logout'), logout_path %>
+  <div id="maps"></div>
 <% else %>
   <%= link_to t('auth.login'), '/auth/moves' %>
 <% end %>
