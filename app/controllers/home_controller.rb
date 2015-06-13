@@ -15,16 +15,16 @@ class HomeController < BaseController
     # 2. 画面描画を早くして体感速度を上げたい
     # 3. 1週間？1ヶ月？何らかの単位でAjaxで部分取得＋部分描画を行う
     # 4. 恐らく問題ないが、分割描画にした際にjs側の描画関数を多少修正する必要あり？
-    while since < Time.now do
-      to = if since + 1.week > Time.now then Time.now else since + 1.week end
-      storylines = moves.daily_storyline(since..to)
+    # while since < Time.now do
+    #   to = if since + 1.week > Time.now then Time.now else since + 1.week end
+    #   storylines = moves.daily_storyline(since..to)
 
-      storylines.each do |storyline|
-        next if storyline['segments'] == nil
-        gon.storyline += storyline['segments']
-      end
+    #   storylines.each do |storyline|
+    #     next if storyline['segments'] == nil
+    #     gon.storyline += storyline['segments']
+    #   end
 
-      since += 1.week
-    end
+    #   since += 1.week
+    # end
   end
 end

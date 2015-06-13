@@ -1,5 +1,8 @@
 ja:
   name: Never moves to?
+  help: 'ヘルプ'
+  menu:
+    label: 'メニュー'
   auth:
     login: 'ログイン'
     logout: 'ログアウト'
