@@ -1,4 +1,6 @@
 class HomeController < BaseController
+  before_filter :login_required, :only => 'index'
+
   def index
     moves = Moves::Client.new(current_user.access_token)
     profile = moves.profile['profile']
