@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  get 'welcome/index'
-  get 'welcome/term'
-  get 'welcome/privacy'
+  get 'index', to: 'welcome/index'
+  get 'term', to: 'welcome/term'
+  get 'privacy', to: 'welcome/privacy'
+  get 'help', to: 'welcome/help'
 
   get 'home/index'
 
