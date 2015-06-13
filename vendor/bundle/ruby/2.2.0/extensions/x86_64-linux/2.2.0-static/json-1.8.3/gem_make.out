@@ -1,0 +1,9 @@
+/home/vagrant/.rbenv/versions/2.2.2/bin/ruby -r ./siteconf20150613-17899-1rddhpy.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
