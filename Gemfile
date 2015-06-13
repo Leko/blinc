@@ -35,6 +35,7 @@ gem 'unicorn'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'font-awesome-sass'
+gem 'gon'
 
 gem 'dotenv-rails'
 gem 'omniauth-moves'
