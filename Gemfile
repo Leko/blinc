@@ -40,6 +40,7 @@ gem 'gon'
 gem 'dotenv-rails'
 gem 'omniauth-moves'
 gem 'moves'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'sqlite3'

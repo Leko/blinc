@@ -1,8 +1,17 @@
 ja:
-  name: Never moves to?
-  help: 'ヘルプ'
+  name: Blind spot
+  catchcopy: 旅の盲点、見つけます
+  copyright: 2015-2015 Leko &copy;
+  help: ヘルプ
   menu:
-    label: 'メニュー'
+    label: メニュー
   auth:
-    login: 'ログイン'
-    logout: 'ログアウト'
+    login: ログイン
+    signup: はじめる
+    logout: ログアウト
+  concept:
+    title: 移動履歴を全部まとめて
+    description: Movesで記録した行動履歴を全て地図上に描きます。移動手段、経路、距離などの情報を１枚の地図上にすべて表示します。<br><br>普段からよく行くところ、普段あまり行かないところなど、これまでの生活に潜む思わぬ穴が見つかるかも？
+  merit:
+    title: MovesだけあればOK
+    description: Movesをインストールされていれば利用できます。他に必要なものも手間もありません。

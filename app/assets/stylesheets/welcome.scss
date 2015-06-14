@@ -1,3 +1,40 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.concept {
+  width: 100%;
+  padding-top: 100px;
+  background: image-url("cover.jpg") bottom center no-repeat no-repeat fixed;
+  background-size: cover;
+}
+
+.brand {
+  margin-bottom: 300px;
+  text-align: center;
+}
+
+$concept_color: #888;
+.concept .btn-primary {
+  color: $concept_color;
+  background-color: rgba(#fff, 1);
+  border-width: 2px;
+  border-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+.concept .btn-primary:hover {
+  color: #fff;
+  background-color: rgba(#fff, 0);
+}
+
+.docs {
+  background: #fff;
+  padding-top: 20px;
+}

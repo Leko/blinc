@@ -1,5 +1,54 @@
 
-<div class="col-md-12 wide-vertical">
-  <div id="maps" class="wide-vertical"></div>
-  <div id="progress"></div>
-</div>
+<% if @current_user %>
+  <div class="col-md-12 wide-vertical">
+    <div id="maps" class="wide-vertical"></div>
+    <div id="progress"></div>
+  </div>
+<% else %>
+  <div class="concept">
+    <div class="container brand">
+      <h1>
+        <%= t('name') %><br>
+        <small><%= t('catchcopy') %></small>
+      </h1>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <%= link_to t('auth.login'), '/auth/moves', :class => 'btn btn-primary btn-block btn-lg' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="docs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              <img src="<%= asset_path 'demo.png' %>" width="100%">
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h2><%= t('concept.title') %></h2>
+            <p><%= t('concept.description').html_safe %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="<%= asset_path 'moves_logo.png' %>" class="img-circle" width="80%">
+          </div>
+          <div class="col-md-6">
+            <h2><%= t('merit.title') %></h2>
+            <p><%= t('merit.description').html_safe %></p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p>
+            <strong>&copy; 2015-<%= Time.now.strftime('%Y') %> Leko</strong><br>
+            Photo by <a href="https://www.flickr.com/photos/davebloggs007/" target="_blank">davebloggs007</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

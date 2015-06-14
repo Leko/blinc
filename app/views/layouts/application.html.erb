@@ -6,6 +6,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if @current_user %>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -31,6 +32,7 @@
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
+  <% end %>
 
   <div class="row-fluid wide-vertical">
     <%= yield %>
