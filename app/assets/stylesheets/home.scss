@@ -2,3 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#maps {
+  position: relative;
+}
+#progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  background: rgba(2, 217, 220, .7);
+  opacity: 1;
+  transition: width .5s;
+}
+#progress.progress-done {
+  width: 100%;
+  opacity: 0;
+  transition: width,opacity .5s;
+}
