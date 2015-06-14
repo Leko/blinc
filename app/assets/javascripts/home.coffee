@@ -17,7 +17,7 @@ openInfo = (marker, place, latlng) ->
   infoWindow = new google.maps.InfoWindow
     content: loading.get(0).outerHTML
     maxWidth: 300
-
+  infoWindow.open(map, marker)
   geocoder.geocode {location: latlng}, (results) ->
     request = {placeId: results[0].place_id}
     service.getDetails request, (info, status) ->
@@ -29,9 +29,6 @@ openInfo = (marker, place, latlng) ->
       if photos
         loading.prepend $('<img>').attr('src', photos[0].getUrl({maxWidth: 300}))
       infoWindow.setContent loading.get(0).outerHTML
-
-    console.log(results, results[0].place_id)
-  infoWindow.open(map, marker)
 
 # グローバルを書き換えるので複雑になりそう。
 drawSegments = (idx) ->
@@ -82,7 +79,7 @@ fetchSegments = (profile) ->
   requests = []
   i = 0
 
-  while since.getTime() < now.getTime() - SPAN * 100
+  while since.getTime() < now.getTime()
     dfd = $.getJSON('/moves/storylines', {
       from: since
       to: since + SPAN
