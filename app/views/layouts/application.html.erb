@@ -4,6 +4,12 @@
   <title><%= t('name') %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta property="og:type" content="<%= @root ? 'website' : 'article' %>">
+  <meta property="og:url" content="https://blinc.herokuapp.com">
+  <meta property="og:image" content="<%= asset_path 'thumbnail.png' %>">
+  <meta property="og:site_name" content="<%= t('name') %>">
+  <meta property="og:description" content="<%= t('catchcopy') %>">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <% if @current_user %>
