@@ -75,23 +75,31 @@ fetchSegments = (profile) ->
   since = new Date(+date.substr(0, 4), +date.substr(4, 2) - 1, +date.substr(6, 2))
   now = new Date()
 
-  paths = []
+  ranges = []
   requests = []
-  i = 0
 
   while since.getTime() < now.getTime()
-    dfd = $.getJSON('/moves/storylines', {
-      from: since
-      to: since + SPAN
-    })
+    range = {
+      from: new Date(since.getTime()),
+      to: new Date(since.getTime() + SPAN)
+    }
+    ranges.push(range)
+    requests.push(range)
+    since.setTime Math.min(since.getTime() + SPAN, now.getTime())
+
+  i = 0
+  paths = []
+  tid = setInterval(() ->
+    range = ranges.pop()
+    dfd = $.getJSON('/moves/storylines', range)
     draw = drawSegments(i++)
     dfd.always (segments) ->
       done = progress()
-      finished() if done
+      if done
+        clearInterval(tid)
+        finished()
       draw(segments) if Array.isArray(segments)
-
-    requests.push dfd
-    since.setTime Math.min(since.getTime() + SPAN, now.getTime())
+  , 1000)
 
 maps = document.getElementById('maps')
 if maps
