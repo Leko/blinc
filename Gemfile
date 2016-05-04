@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.2.3'
 
 gem 'pg'
 
@@ -43,7 +43,7 @@ gem 'moves'
 gem 'redcarpet'
 
 group :development, :test do
-  gem 'sqlite3'
+  # gem 'sqlite3'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
