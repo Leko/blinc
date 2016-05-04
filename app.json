@@ -1,0 +1,8 @@
+{
+  "name": "blinc",
+  "description": "旅の盲点、見つけます",
+  "image": "heroku/ruby",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
